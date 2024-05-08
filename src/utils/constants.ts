@@ -16,3 +16,5 @@ export const STOPLIGHT_CIRCLE_SIZE = 50;
 export const RANDOM_TIME_LIMIT = 3;
 
 export const TOUCH_OFFSET = 70;
+
+export const ROPE_HEIGHT_BASE = 40;

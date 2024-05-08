@@ -1,28 +1,39 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+
 const PrimaryButton = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>PLAY</Text>
-    </View>
+    <TouchableOpacity
+      style={{
+        borderWidth: 4,
+        borderColor: 'white',
+        borderRadius: 40,
+        overflow: 'hidden',
+      }}
+    >
+      <LinearGradient
+        colors={['#70E0FD', '#4CDAFE']}
+        start={{ x: 1, y: 1 }}
+        locations={[0.5, 0.5]}
+        end={{ x: 0, y: 0 }}
+        style={styles.buttonGrad}
+      >
+        <Text style={styles.text}>Volver a jugar</Text>
+      </LinearGradient>
+    </TouchableOpacity>
   );
 };
 export default PrimaryButton;
+
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#FE6C56',
-    paddingHorizontal: 24,
-    paddingVertical: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
-    elevation: 8,
-    borderRadius: 20,
-    borderWidth: 2,
-    borderColor: 'white',
+  buttonGrad: {
+    paddingHorizontal: 16,
+    paddingVertical: 8,
   },
   text: {
     color: 'white',
-    fontWeight: 'bold',
-    fontSize: 24,
-    includeFontPadding: false,
+    fontSize: 18,
+    fontFamily: 'Rowdies_400Regular',
+    textTransform: 'uppercase',
   },
 });
